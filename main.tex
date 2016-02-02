@@ -9,7 +9,7 @@
 \graphicspath{{./plaatjes/}}
 %\usepackage[utf8]{inputenc}
 \setmainfont{Source Sans Pro}
-\setmonofont{Source Sans Pro}
+\setmonofont{Source Code Pro}
 %\usepackage{biblatex}
 %\usepackage{cite}
 \usepackage{url}
@@ -21,7 +21,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \lstset{
-  basicstyle=\footnotesize        % the size of the fonts that are used for the code
+  basicstyle=\footnotesize\ttfamily
 }
 
 \newcommand*\schrijver{Louis van der Burg}
@@ -31,7 +31,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\nouppercase\leftmark}
-\fancyhead[RE,LO]{\partname\ \thepart}
+\fancyhead[RE,LO]{\chaptername\ \thechapter}
 \fancyfoot[CE,CO]{\schrijver}
 \fancyfoot[LE,RO]{\thepage}
 
@@ -59,7 +59,7 @@
 
 %% \include{abstract}
 \include{introduction}
-%% \include{problem}
+\include{problem}
 %% \include{idea}
 %% \include{details}
 %% \include{conclusion}
@@ -71,7 +71,7 @@
 %% \addtocounter{page}{4}
 
 
-%% \bibliographystyle{plain}
-%% \bibliography{stage_biblio}
+\bibliographystyle{plain}
+\bibliography{minor_biblio}
 
 \end{document}
