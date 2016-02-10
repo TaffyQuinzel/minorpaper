@@ -1,9 +1,12 @@
 %\documentclass[a4paper,twoside,openright]{report}
-\documentclass[a4paper]{report}
+\documentclass[a4paper]{article}
 \usepackage[english]{babel}
 \usepackage{fancyhdr}
 \usepackage{fontspec}
 \usepackage{emptypage}
+\usepackage[driver=xetex,a4paper]{geometry} % propper margins on a4 paper
+\usepackage{amsmath}
+\usepackage{pstricks-add}
 %% \usepackage[official]{eurosym}
 \usepackage[nottoc,numbib]{tocbibind}
 \graphicspath{{./plaatjes/}}
@@ -21,17 +24,27 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \lstset{
-  basicstyle=\footnotesize\ttfamily
+  basicstyle=\footnotesize\ttfamily,
+  frame=single,
+  keepspaces=true
 }
 
 \newcommand*\schrijver{Louis van der Burg}
 
+\newcommand\BrText[2]{%
+	\par\smallskip
+	\noindent\makebox[\textwidth][r]{$\text{#1}\left\{
+			\begin{minipage}{\textwidth}
+				\lstset{#2}
+			\end{minipage}
+		\right.\nulldelimiterspace=0pt$}\par\smallskip
+	}
 
 %header & footer
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\nouppercase\leftmark}
-\fancyhead[RE,LO]{\chaptername\ \thechapter}
+\fancyhead[RE,LO]{\title\ \thesection}
 \fancyfoot[CE,CO]{\schrijver}
 \fancyfoot[LE,RO]{\thepage}
 
@@ -51,25 +64,27 @@
 \author{\schrijver}
 \date{25 January 2016}
 
-\begin{titlepage}
-  \include{voorpagina}
-\end{titlepage}
+%\begin{titlepage}
+  %\include{voorpagina}
+%\end{titlepage}
 
-\maketitle
+%\maketitle
 
-%% \include{abstract}
+\include{abstract}
+
+\pagenumbering{gobble}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+\addtocounter{page}{4}
+
 \include{introduction}
 \include{problem}
-%% \include{idea}
-%% \include{details}
-%% \include{conclusion}
-
-%% \pagenumbering{gobble}
-%% \tableofcontents
-%% \cleardoublepage
-%% \pagenumbering{arabic}
-%% \addtocounter{page}{4}
-
+\include{idea}
+\include{details}
+\include{conclusion}
+\include{related}
 
 \bibliographystyle{plain}
 \bibliography{minor_biblio}

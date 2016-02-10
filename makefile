@@ -5,3 +5,5 @@ all:
 	xelatex main.tex -output-directory=build
 	mv *.aux build/
 	mv *.log build/
+	pdftotext main.pdf
+	wc -w main.txt

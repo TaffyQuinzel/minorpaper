@@ -1,0 +1,29 @@
+\section{The Problem}
+
+This paper will try to assess how well MC in practicly usable.
+Wi want to know this about MC to find any room for improment in the language.
+
+
+
+
+
+\subsection{MC}
+the fact that there are very few strongly typed languages, stems from there complexity and unusability in most practical forms.
+
+MC tries to be the first strongly typed language which is also practical.
+
+MC is made to create other languages.
+This might sound odd at first, but when you look at Lisp, it doesn't sound to strange.
+Lisp has been made with the principle to do bottom up programming. \cite{onlisp}
+Most experienced lisp programmers first create the language they need with lisp, afterwards they use this created language to program the actual program.
+
+MC takes this quite litarely and wants to be a language to easily build compilers in.
+It does this by using monads and monad transformers.
+You can easily combine monads via monad transformers to create a parser monad.
+A parser monad is quite adapt for parsing, hence its name.
+MC uses it as a basis for the compilers we can build with it.
+
+As of this moment the language is not yet complete and has no parser monad yet, but all the buildingblocks are there.
+
+\paragraph{}
+We first want to test if MC is a good language up to now. Then we can improve it to make it fit for the purpose it aims to be.
