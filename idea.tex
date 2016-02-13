@@ -1,125 +1,126 @@
-\section{The Idea}
+\section{The Idea}\label{sec:criteria}
 
-\textbf{fix this please!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!}
-  For a programming language to be usable and good it needs to be tested on  the following criteria\cite{khedker1997makes,graham2004hackers}:
+For a programming language to be practically usable it needs to be tested on the following criteria\cite{khedker1997makes,graham2004hackers}:
 
 \begin{multicols}{3}
-\begin{enumerate}
-  \item Read- \& Writability
-  \item Simplicity
-  \item Definiteness
-  \item Orthogonality
-  \item Expressiveness
-  \item Implementability
-  \item Efficiency
-  \item Libraries
-  \item Time
-  \item Hackability
-  \item Succintness
-  \item Redesign
-  \item External Factors
-\end{enumerate}
+   \begin{enumerate}
+      \item Read- \& Writability
+      \item Simplicity
+      \item Definiteness
+      \item Orthogonality
+      \item Expressiveness
+      \item Implementability
+      \item Efficiency
+      \item Libraries
+      \item Time
+      \item Hackability
+      \item Succintness
+      \item Redesign
+      \item External Factors
+   \end{enumerate}
 \end{multicols}
 Let's touch on each of these briefly, before we connect them to MC.
 
 \begin{multicols}{2}
-\paragraph{Read- \& Writability }
-of a programming language determines how good the connection between man and machine is.
- The programmer must be able to write programs he understands easily, even after months or years of not looking at it.
- This makes debugging much easier.
+   \paragraph{Read- \& Writability }
+   of a programming language determines how good the connection between man and machine is.
+   The programmer must be able to write programs he understands easily, even after months or years of not looking at it.
 
-Documentation makes up a basic part of read- \& writability.
- But to really be able to make a program reabable, even after a prolonged absence, the language needs to be it's own documentation.
- This can be done via a manner of ways:
-\begin{itemize}
-  \item Keywords
-  \item Abbreviations and concise notation
-  \item Comments
-  \item Layout or format of programs
-  \item No overuse of notation
-\end{itemize}
-These points will be explained later on with examples off MC.
-\cite{}
+   With easy to read and write programs comes also the ease if debugging.
+   As we can quickly notice any faults in the source code.
 
-\paragraph{Simplicity}
-of a language is decided by it's features.
- These should be easy to learn and remember.
- To make this more provable we will make use of these subpoints:
-\begin{itemize}
-  \item Structure
-  \item Number of features
-  \item Multiple ways of specification
-  \item Multiple ways of expressing
-\end{itemize}
-We will touch on these briefly with concern towards MC.
-\cite{} But the main concept through which simplicity is achieved, is through basing the language around a few simple well-defined concepts.
-\cite{}
+   Documentation makes up a basic part of read- \& writability.
+   But to really be able to make a program readable, even after a prolonged absence, the language needs to be it's own documentation.
+   This can be done via a manner of ways:
+   \begin{itemize}
+      \item Keywords
+      \item Abbreviations and concise notation
+      \item Comments
+      \item Layout or format of programs
+      \item No overuse of notation
+   \end{itemize}
+   These points will be explained later on with examples off MC in section \ref{sec:readwrite}.
 
-\paragraph{Definiteness}
-makes it clear for which purpose the language is designed and how it is to be used.
- When a language has a clear view and definition of itself during creation, it will also be clear to the user for what purposes to use tho language.
+   \paragraph{Simplicity}
+   of a language is decided by it's features.
+   These should be easy to learn and remember.
+   To make this more provable we will make use of these sub points:
+   \begin{itemize}
+      \item Structure
+      \item Number of features
+      \item Multiple ways of specification
+      \item Multiple ways of expressing
+   \end{itemize}
+   We will touch on these briefly with concern towards MC.
+   \ref{sec:simplicity} But the main concept through which simplicity is achieved, is through basing the language around a few simple well-defined concepts.
+   \cite{khedker1997makes}
 
-\paragraph{Orthogonality}
-means that the language should be predictable.
- When one user programs the same as another user, the result should be the same.
- This implies that if the user understands the basics of the language, he can then expand beyond them by combining these basics.
+   \paragraph{Definiteness}
+   makes it clear for which purpose the language is designed and how it is to be used.
+   When a language has a clear view and definition of itself, it will also be clear to the user for what purposes to use tho language.
 
-However, these rules of the language should not hinder the user by making the possible combinations too complex.
+   \paragraph{Orthogonality}
+   means that the language should be predictable.
+   When one user programs the same as another user, the result should be the same.
+   This implies that if the user understands the basics of the language, he can then expand beyond them by combining these basics.
 
-\paragraph{Expressiveness}
-goes hand in hand with abstraction.
- The language should be able to show the user the program in a way that his thoughts match with it.
- Machine language is hard to understand for a human, it is too basic in it's abilities.
- This can however be remedied by the language the user is using.
- It is the link between what the user has in his mind and what the machine will execute.
- Therefor the language should be similiar to the way the user thinks.
- This makes it easier for the user to express his thoughts in code.
+   However, the rules of the language should not hinder the user by making the available combinations too complex.
 
-\paragraph{Efficiency}
-is something most users want out of their computer.
- Programmers like to write fast programs.
- The language should facilitate this.
- Even if the language is very abstract, which usually means it is less efficient\cite{}, it should be able to create fast code.
- Or make it visible to the user where the bottlenecks are.
+   \paragraph{Expressiveness}
+   goes hand in hand with abstraction.
+   The language should be able to show the user the program in a way that matches with his thoughts.
 
-\paragraph{Libraries}
-are a necessity for every programming language.
- Without them the language would be useless and the programmer would have to build every feature from the ground up.
- This makes programming in the language take a long time.
+   Machine language is hard to understand for a human, it is too basic in it's abilities.
+   This can however be remedied by the language the user is using.
+   It is the link between what the user has in his mind and what the machine will execute.
+   Therefor the language should be similar to the way the user thinks.
+   This makes it easier for the user to express his thoughts in code.
 
-\paragraph{Time}
-is something everything needs to build momentum and a stable userbase, even programming languages can't excape this.
- For now we won't be able to really test this, as MC is still in it's development stages.
- For this reason we will leave this out.
+   \paragraph{Efficiency}
+   is something most users want out of their computer.
+   Programmers like to write fast programs.
+   The language should facilitate this.
+   Even if the language is very abstract, which usually means it is less efficient\cite{graham2004hackers}, it should be able to generate fast code.
+   Or make it visible to the user where the bottlenecks are.
 
-\paragraph{Hackability}
-is the ability to bend the language to one's will or to form the language to one's needs.
- In other words how much can you do with the language and how malleable and versatile is it.
- This also depends on the ability, of the programmer, to think outside the pre-defined box of the language.
- We will try to see how well MC supports this type of thinking.
+   \paragraph{Libraries}
+   are a necessity for every programming language.
+   Without them the language would be useless and the programmer would have to build every feature from the ground up.
+   This makes programming in the language take a long time.
 
-\paragraph{Succinctness}
-makes a language more abstract.
- When you have to say less to make the computer do precisly what you want, is something very powerfull.
- It also makes the programs shorter and clearer to read.
+   \paragraph{Time}
+   is something everything needs to build momentum and a stable user base, even programming languages can't escape this.
+   For now we won't be able to really test this, as MC is still in it's development stages.
+   For this reason we will leave this out.
 
-\paragraph{Redesign}
-enables the evolution of a program written in the language.
- This makes it easier to go from a rough prototype to a fully featured program.
+   \paragraph{Hackability}
+   is the ability to bend the language to one's will or to form the language to one's needs.
+   In other words how much can you do with the language and how malleable and versatile it is.
+   This also depends on the ability, of the programmer, to think outside the pre-defined box of the language.
+   We will try to see how well MC supports this type of thinking.
 
-\paragraph{External Factors and Implementability}
-play a big role in the adaptation of a language.
- Without some use for the language, it might aswell not exist.
- Having a platform for the language plays a major part in the way it will be adopted as a standard.
- This doesn't have to be a physical platform, like UNIX or Windows.
- It can be a virtual platform, as is an already existing major library.
- The only problem with the latter is, that the new language has to have something making it stand out from the readilly available languages who implement the library.
+   \paragraph{Succinctness}
+   makes a language more abstract.
+   When you have to say less to make the computer do precisely what you want, that is something very powerful.
+   It also makes the programs shorter and clearer to read.
 
-\paragraph{}
-Do keep in mind that most of these criteria can be subjective to the user of the language and are not 100\% provable.
- We will try to discuss the most objective parts for provability's sake.
+   \paragraph{Redesign}
+   enables the evolution of a program written in the language.
+   This makes it easier to go from a rough prototype to a fully featured program.
 
-First I will explain MC in more detail, after which it can be put to the test.
- I will see how far it already has the above described criteria and in which areas it still needs some improvement.
+   \paragraph{External Factors and Implementability}
+   play a big role in the adaptation of a language.
+   Without some use for the language, it might as well not exist.
+   Having a platform for the language plays a major part in the way it will be adopted as a standard.
+   This doesn't have to be a physical platform, like UNIX or Windows.
+   It can be a virtual platform, like an already existing major library.
+   The only problem with the latter is, that the new language has to compete with other languages who already implement the library.
+
+   \paragraph{}
+   Do keep in mind that most of these criteria can be subjective to the user of the language and are not 100\% provable.
+   Thus we will try to discuss the most objective parts for provability's sake.
+
+   First we will explain MC in more detail, after which it can be put to the test.
+   We will see how far it already has the above described criteria and in which areas it still needs some improvement.
 
 \end{multicols}

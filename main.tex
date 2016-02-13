@@ -10,6 +10,7 @@
 %% \usepackage[official]{eurosym}
 \usepackage[nottoc,numbib]{tocbibind}
 \graphicspath{{./plaatjes/}}
+\DeclareGraphicsExtensions{.png}
 %\usepackage[utf8]{inputenc}
 \setmainfont{Source Sans Pro}
 \setmonofont{Source Code Pro}
@@ -24,69 +25,78 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \lstset{
-  basicstyle=\footnotesize\ttfamily,
-  frame=single,
-  keepspaces=true
+   basicstyle=\footnotesize\ttfamily,
+   frame=single,
+   keepspaces=true
 }
 
 \newcommand*\schrijver{Louis van der Burg}
 
 \newcommand\BrText[2]{%
-	\par\smallskip
-	\noindent\makebox[\textwidth][r]{$\text{#1}\left\{
-			\begin{minipage}{\textwidth}
-				\lstset{#2}
-			\end{minipage}
-		\right.\nulldelimiterspace=0pt$}\par\smallskip
-	}
+   \par\smallskip
+   \noindent\makebox[\textwidth][r]{$\text{#1}\left\{
+         \begin{minipage}{\textwidth}
+            \lstset{#2}
+         \end{minipage}
+      \right.\nulldelimiterspace=0pt$}\par\smallskip
+   }
 
-%header & footer
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LE,RO]{\nouppercase\leftmark}
-\fancyhead[RE,LO]{\title\ \thesection}
-\fancyfoot[CE,CO]{\schrijver}
-\fancyfoot[LE,RO]{\thepage}
+   %header & footer
+   \pagestyle{fancy}
+   \fancyhf{}
+   \fancyhead[LE,RO]{\nouppercase\leftmark}
+   \fancyhead[RE,LO]{\title\ \thesection}
+   \fancyfoot[CE,CO]{\schrijver}
+   \fancyfoot[LE,RO]{\thepage}
 
-%title page stuff
-\fancypagestyle{plain}{
-  \fancyhf{}\fancyfoot[LE,RO]{\thepage}%
-  \fancyfoot[CE,CO]{\schrijver}
-  \renewcommand{\headrulewidth}{0pt}}
+   %title page stuff
+   \fancypagestyle{plain}{
+      \fancyhf{}\fancyfoot[LE,RO]{\thepage}%
+      \fancyfoot[CE,CO]{\schrijver}
+   \renewcommand{\headrulewidth}{0pt}}
 
-%% \newenvironment{poliabstract}[1]
-%%                {\renewcommand{\abstractname}{#1}\begin{abstract}}
-%%                {\end{abstract}}
+   %% \newenvironment{poliabstract}[1]
+   %%                {\renewcommand{\abstractname}{#1}\begin{abstract}}
+   %%                {\end{abstract}}
 
-% start actual doc
-\begin{document}
-\title{Shit with MC and other useless crap}
-\author{\schrijver}
-\date{25 January 2016}
+   % start actual doc
+   \begin{document}
+   % \title{Shit with MC and other useless crap}
+   % \author{\schrijver}
+   % \date{25 January 2016}
 
-%\begin{titlepage}
-  %\include{voorpagina}
-%\end{titlepage}
+   \begin{titlepage}
+      \include{voorpagina}
+   \end{titlepage}
 
-%\maketitle
+   %\maketitle
 
-\include{abstract}
+   % state the problem
+   % say why it's an interesting problem
+   % say what your solution is
+   % say what follows from your solution
 
-\pagenumbering{gobble}
-\setcounter{tocdepth}{2}
-\tableofcontents
-\cleardoublepage
-\pagenumbering{arabic}
-\addtocounter{page}{4}
+   \begin{abstract}
+      MC has not been tested in the field yet and we want to know how it fares.
+      We will put it to the test and see that it still needs some development, but has promise.
+   \end{abstract}
+   \newpage
 
-\include{introduction}
-\include{problem}
-\include{idea}
-\include{details}
-\include{conclusion}
-\include{related}
+   \pagenumbering{gobble}
+   \setcounter{tocdepth}{2}
+   \tableofcontents
+   \cleardoublepage
+   \pagenumbering{arabic}
+   \addtocounter{page}{4}
 
-\bibliographystyle{plain}
-\bibliography{minor_biblio}
+   \include{introduction}
+   \include{problem}
+   \include{idea}
+   \include{details}
+   \include{conclusion}
+   % \include{related}
 
-\end{document}
+   \bibliographystyle{plain}
+   \bibliography{minor_biblio}
+
+   \end{document}
