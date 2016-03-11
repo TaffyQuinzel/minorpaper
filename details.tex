@@ -14,7 +14,7 @@ Now let's go over the different parts:
 
 \paragraph{Declarations}
 enable the user to define their own keywords.
-The keywords are in parenthesis and the arrows make up the order of the declaration.
+The keywords are in parenthesis and the arrows define the order of the declaration.
 As shown above it is possible to have functions with variables on the left side of the declaration.
 The variable after the final arrow is the return value of the function.
 
@@ -23,7 +23,8 @@ occur after the declarations.
 The rule starts with the input and output below the line of dashes, called the bar.
 On the left of the arrow the input is stated and on the right the output.
 Above the line are where the function actually does the work.
-It tests the premises or conditionals to see if the rule can be executed.
+It tests the premises to see if the rule can be executed.
+Within the premises you can have clauses, which are tested, and function calls, which are recursively evaluated and fail if they do not return a result.
 
 We can define multiple rules per function and they will be simultaneously executed.
 The program will split and rules that don't match will stop.
@@ -52,7 +53,7 @@ However, as the name suggests, TypeFunc defines a type and not a term.
 And it uses kinds to do this.\footnote{For more information about kinds see \cite{pierce2002types}}
 These types can than be implemented by Func as we can see in the example.
 
-Another difference are the arrows used.
+Another difference is the arrows used.
 Instead of using the normal arrow (->) the => arrow is used in TypeFunc declarations.
 This is to add clarity as to what is being declared.
 

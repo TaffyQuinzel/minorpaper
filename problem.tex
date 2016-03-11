@@ -6,12 +6,12 @@ The fact that there are very few strongly typed languages, stems from their comp
 MC aims to be the first strongly typed language which is also practical.
 
 MC is made for creating other languages.
-This might sound odd at first, but when you look at Lisp, it doesn't sound too strange.
+This might sound odd at first, but when you look at Lisp, it does not sound too strange.
 Lisp has been made with the principle of bottom up programming \cite{graham1994lisp}.
 Most experienced Lisp programmers first create the language they need with Lisp, after which they use this created language to program the actual application.
 
 MC takes this quite literally and wants to be a language to easily build compilers in.
-It does this by using monads and monad transformers.
+It does this by using monads and monad transformers, for an explanation of monads see \cite{wadler1992comprehending}.
 You can easily combine monads via monad transformers to create a parser monad.
 A parser monad is quite adapt for parsing, hence its name.
 MC uses it as a basis for the compilers we can build with it.
